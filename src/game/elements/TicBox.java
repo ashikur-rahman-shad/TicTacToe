@@ -11,10 +11,13 @@ public class TicBox extends JButton {
         X=row;
         Y=column;
         setBounds(Y*100,X*100+100,100,100);
-        setBorderPainted(false);
+        setForeground(Color.WHITE);
+        setBackground(Color.decode("#212121"));
+        setBorder(BorderFactory.createLineBorder(Color.WHITE,1));
+        //setBorderPainted(false);
         setText(value);
         setFocusPainted(false);
-        setFont(new Font("Serif", Font.PLAIN, 64));
+        setFont(new Font("Serif", Font.PLAIN, 56));
     }
     public void click(String x){
         if(value.equals(" ")){

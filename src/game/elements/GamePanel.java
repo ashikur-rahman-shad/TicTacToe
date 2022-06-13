@@ -1,6 +1,7 @@
 package game.elements;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,8 +21,9 @@ public class GamePanel extends JPanel {
     String turn;
 
     public GamePanel() {
-        setVisible(true);
+        setBackground(Color.decode("#121212"));
         setLayout(null);
+        //setVisible(true);
 
         add(topTitle);
         add(button1);
@@ -49,14 +51,15 @@ public class GamePanel extends JPanel {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (((TicBox) e.getSource()).getText().equals(" ")) {
+                moves++;
                 if (moves % 2 == 0) {
-                    turn = "◯";
-                } else
                     turn = "✕";
+                } else
+                    turn = "◯";
+
                 ((TicBox) e.getSource()).click(turn);
                 topTitle.click(moves);
                 check();
-                moves++;
             }
         }
     };
@@ -107,7 +110,7 @@ public class GamePanel extends JPanel {
                 )
         ) {
             topTitle.setText("<html>"+turn + " Wins! Another round?" +
-                    "<br/>Player 1's turn (O)<html>");
+                    "<br/>Player 1's turn (◯)<html>");
             reset();
         } else if(moves==9){
             topTitle.setText("<html>Draw! Another round?<br/>Player 1's turn (O)<html>");

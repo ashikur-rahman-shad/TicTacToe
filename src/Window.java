@@ -8,7 +8,7 @@ public class Window extends JFrame {
     GamePanel newGame = new GamePanel();
     public Window(){
         setTitle("TicTacToe");
-        setSize(300,450);
+        setSize(315,450);
         setResizable(false);
         setLayout(null);
         setContentPane(newGame);
