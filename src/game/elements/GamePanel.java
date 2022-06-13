@@ -133,8 +133,8 @@ public class GamePanel extends JPanel {
                 )
         ) {
             topTitle.setText("<html>"
-                    +turn + " Wins! Another round?" +
-                    "<br/>Player 1's turn (◯)<html>");
+                    +turn + " Win! Another round?" +
+                    "<br/>◯'s turn<html>");
 
             if(turn.equals("✕")){
                 score.updateScore(0,1);
@@ -143,7 +143,7 @@ public class GamePanel extends JPanel {
             }
             reset();
         } else if(moves==9){
-            topTitle.setText("<html>Draw! Another round?<br/>Player 1's turn (O)<html>");
+            topTitle.setText("<html>Draw! Another round?<br/>◯'s turn<html>");
             reset();
         }
     }
