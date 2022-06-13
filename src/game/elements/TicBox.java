@@ -10,7 +10,7 @@ public class TicBox extends JButton {
     public TicBox(int row,int column){
         X=row;
         Y=column;
-        setBounds(Y*100,X*100+100,100,100);
+        setBounds(Y*100+10,X*100+110,100,100);
         setForeground(Color.WHITE);
         setBackground(Color.decode("#212121"));
         setBorder(BorderFactory.createLineBorder(Color.WHITE,1));

@@ -17,8 +17,11 @@ public class GamePanel extends JPanel {
     TicBox button9 = new TicBox(2, 2);
 
     TopTitle topTitle = new TopTitle();
+    Score score = new Score();
     int moves = 0;
     String turn;
+    SmallBtn resetBtn = new SmallBtn("Reset",95);
+    SmallBtn about = new SmallBtn("About",170);
 
     public GamePanel() {
         setBackground(Color.decode("#121212"));
@@ -35,6 +38,9 @@ public class GamePanel extends JPanel {
         add(button7);
         add(button8);
         add(button9);
+        add(score);
+        add(resetBtn);
+        add(about);
 
         button1.addActionListener(buttonClick);
         button2.addActionListener(buttonClick);
@@ -45,6 +51,8 @@ public class GamePanel extends JPanel {
         button7.addActionListener(buttonClick);
         button8.addActionListener(buttonClick);
         button9.addActionListener(buttonClick);
+        resetBtn.addActionListener(resetScore);
+        about.addActionListener(aboutDialogue);
     }
 
     ActionListener buttonClick = new ActionListener() {
@@ -63,6 +71,21 @@ public class GamePanel extends JPanel {
             }
         }
     };
+
+    ActionListener aboutDialogue =
+            e -> JOptionPane.showMessageDialog(
+            about,
+            "Made by Ashikur Rahman Shad",
+            "About",
+            JOptionPane.WARNING_MESSAGE);
+
+    ActionListener resetScore = e -> {
+        score.reset();
+        score.updateScore(0,0);
+        reset();
+        topTitle.setText("◯'s turn");
+    };
+
     /*
     1 2 3
     4 5 6
@@ -109,8 +132,15 @@ public class GamePanel extends JPanel {
                                 (button5.value.equals(button7.value))
                 )
         ) {
-            topTitle.setText("<html>"+turn + " Wins! Another round?" +
+            topTitle.setText("<html>"
+                    +turn + " Wins! Another round?" +
                     "<br/>Player 1's turn (◯)<html>");
+
+            if(turn.equals("✕")){
+                score.updateScore(0,1);
+            }else {
+                score.updateScore(1,0);
+            }
             reset();
         } else if(moves==9){
             topTitle.setText("<html>Draw! Another round?<br/>Player 1's turn (O)<html>");

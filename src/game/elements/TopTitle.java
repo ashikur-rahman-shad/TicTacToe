@@ -9,8 +9,8 @@ public class TopTitle extends JLabel {
         setForeground(Color.WHITE);
         setBounds(10,0,280,100);
         setFont(new Font("Serif", Font.BOLD, 24));
-        setVisible(true);
         setAlignmentX(CENTER_ALIGNMENT);
+        setHorizontalAlignment(CENTER);
     }
     public void click(int x){
         if(x%2==0)
