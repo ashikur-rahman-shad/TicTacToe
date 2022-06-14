@@ -15,18 +15,16 @@ public class GamePanel extends JPanel {
     TicBox button7 = new TicBox(2, 0);
     TicBox button8 = new TicBox(2, 1);
     TicBox button9 = new TicBox(2, 2);
-
     TopTitle topTitle = new TopTitle();
     Score score = new Score();
     int moves = 0;
-    String turn;
     SmallBtn resetBtn = new SmallBtn("Reset",95);
     SmallBtn about = new SmallBtn("About",170);
+    String turn;
 
     public GamePanel() {
         setBackground(Color.decode("#121212"));
         setLayout(null);
-        //setVisible(true);
 
         add(topTitle);
         add(button1);
@@ -55,22 +53,22 @@ public class GamePanel extends JPanel {
         about.addActionListener(aboutDialogue);
     }
 
-    ActionListener buttonClick = new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (((TicBox) e.getSource()).getText().equals(" ")) {
-                moves++;
-                if (moves % 2 == 0) {
-                    turn = "✕";
-                } else
-                    turn = "◯";
+    ActionListener buttonClick = e -> {
+        if (((TicBox) e.getSource()).getText().equals(" ")) {
+            moves++;
+            if (moves % 2 == 0) {
+                turn = "✕";
+            } else
+                turn = "◯";
 
-                ((TicBox) e.getSource()).click(turn);
-                topTitle.click(moves);
-                check();
-            }
+            ((TicBox) e.getSource()).click(turn);
+            topTitle.click(moves);
+            check();
         }
     };
+
+
+
 
     ActionListener aboutDialogue =
             e -> JOptionPane.showMessageDialog(
@@ -94,42 +92,42 @@ public class GamePanel extends JPanel {
     void check() {
         if (
                 (
-                        (!button1.value.equals(" ")) &
-                                (button1.value.equals(button2.value)) &
-                                (button2.value.equals(button3.value))
+                        (!button1.getText().equals(" ")) &
+                                (button1.getText().equals(button2.getText())) &
+                                (button2.getText().equals(button3.getText()))
                 ) | (
-                        (!button4.value.equals(" ")) &
-                                (button4.value.equals(button5.value)) &
-                                (button5.value.equals(button6.value))
+                        (!button4.getText().equals(" ")) &
+                                (button4.getText().equals(button5.getText())) &
+                                (button5.getText().equals(button6.getText()))
                 ) | (
-                        (!button7.value.equals(" ")) &
-                                (button7.value.equals(button8.value)) &
-                                (button8.value.equals(button9.value))
-                ) | (
-
-                        (!button1.value.equals(" ")) &
-                                (button1.value.equals(button4.value)) &
-                                (button4.value.equals(button7.value))
+                        (!button7.getText().equals(" ")) &
+                                (button7.getText().equals(button8.getText())) &
+                                (button8.getText().equals(button9.getText()))
                 ) | (
 
-                        (!button2.value.equals(" ")) &
-                                (button2.value.equals(button5.value)) &
-                                (button5.value.equals(button8.value))
+                        (!button1.getText().equals(" ")) &
+                                (button1.getText().equals(button4.getText())) &
+                                (button4.getText().equals(button7.getText()))
                 ) | (
 
-                        (!button3.value.equals(" ")) &
-                                (button3.value.equals(button6.value)) &
-                                (button6.value.equals(button9.value))
+                        (!button2.getText().equals(" ")) &
+                                (button2.getText().equals(button5.getText())) &
+                                (button5.getText().equals(button8.getText()))
                 ) | (
 
-                        (!button1.value.equals(" ")) &
-                                (button1.value.equals(button5.value)) &
-                                (button5.value.equals(button9.value))
+                        (!button3.getText().equals(" ")) &
+                                (button3.getText().equals(button6.getText())) &
+                                (button6.getText().equals(button9.getText()))
                 ) | (
 
-                        (!button3.value.equals(" ")) &
-                                (button3.value.equals(button5.value)) &
-                                (button5.value.equals(button7.value))
+                        (!button1.getText().equals(" ")) &
+                                (button1.getText().equals(button5.getText())) &
+                                (button5.getText().equals(button9.getText()))
+                ) | (
+
+                        (!button3.getText().equals(" ")) &
+                                (button3.getText().equals(button5.getText())) &
+                                (button5.getText().equals(button7.getText()))
                 )
         ) {
             topTitle.setText("<html>"
@@ -158,15 +156,6 @@ public class GamePanel extends JPanel {
         button7.setText(" ");
         button8.setText(" ");
         button9.setText(" ");
-        button1.value=" ";
-        button2.value=" ";
-        button3.value=" ";
-        button4.value=" ";
-        button5.value=" ";
-        button6.value=" ";
-        button7.value=" ";
-        button8.value=" ";
-        button9.value=" ";
     }
 }
 

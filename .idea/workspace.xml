@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a5338c3-4688-45a7-81e5-85210340a66c" name="Changes" comment="about Dialogue JOptionPane's parent set to button5 to make it appear at the center of the page">
-      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
+    <list default="true" id="1a5338c3-4688-45a7-81e5-85210340a66c" name="Changes" comment="To make it appear at the center of the screen or at any position provided by the desktop environment.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/elements/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/elements/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/elements/TicBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/elements/TicBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655188270783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="To make it appear at the center of the screen or at any position provided by the desktop environment.">
+      <created>1655188840060</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655188840060</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +138,7 @@
     <MESSAGE value="2 small buttons:&#10;Reset, About added.&#10;&#10;Score at the bottom added.&#10;&#10;elements slightly rearranged and resize" />
     <MESSAGE value="Some titles and victory messages are modified" />
     <MESSAGE value="about Dialogue JOptionPane's parent set to button5 to make it appear at the center of the page" />
-    <option name="LAST_COMMIT_MESSAGE" value="about Dialogue JOptionPane's parent set to button5 to make it appear at the center of the page" />
+    <MESSAGE value="To make it appear at the center of the screen or at any position provided by the desktop environment." />
+    <option name="LAST_COMMIT_MESSAGE" value="To make it appear at the center of the screen or at any position provided by the desktop environment." />
   </component>
 </project>

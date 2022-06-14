@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class TicBox extends JButton {
-    String value=" ";
     int X;
     int Y;
     public TicBox(int row,int column){
@@ -15,13 +14,12 @@ public class TicBox extends JButton {
         setBackground(Color.decode("#212121"));
         setBorder(BorderFactory.createLineBorder(Color.WHITE,1));
         //setBorderPainted(false);
-        setText(value);
+        setText(" ");
         setFocusPainted(false);
         setFont(new Font("Serif", Font.PLAIN, 56));
     }
     public void click(String x){
-        if(value.equals(" ")){
-            value=x;
+        if(getText().equals(" ")){
             setText(x);
         }
     }
