@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a5338c3-4688-45a7-81e5-85210340a66c" name="Changes" comment="Some titles and victory messages are modified" />
+    <list default="true" id="1a5338c3-4688-45a7-81e5-85210340a66c" name="Changes" comment="about Dialogue JOptionPane's parent set to button5 to make it appear at the center of the page">
+      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655142053888</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="about Dialogue JOptionPane's parent set to button5 to make it appear at the center of the page">
+      <created>1655188270783</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655188270783</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +128,7 @@
     <MESSAGE value="2 small buttons:&#10;Reset, About added.&#10;&#10;Score at the bottom added.&#10;&#10;elements slighly rearranged and resize" />
     <MESSAGE value="2 small buttons:&#10;Reset, About added.&#10;&#10;Score at the bottom added.&#10;&#10;elements slightly rearranged and resize" />
     <MESSAGE value="Some titles and victory messages are modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some titles and victory messages are modified" />
+    <MESSAGE value="about Dialogue JOptionPane's parent set to button5 to make it appear at the center of the page" />
+    <option name="LAST_COMMIT_MESSAGE" value="about Dialogue JOptionPane's parent set to button5 to make it appear at the center of the page" />
   </component>
 </project>

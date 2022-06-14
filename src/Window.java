@@ -16,6 +16,7 @@ public class Window extends JFrame {
         setResizable(false);
         setLayout(null);
         setContentPane(newGame);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
     }
