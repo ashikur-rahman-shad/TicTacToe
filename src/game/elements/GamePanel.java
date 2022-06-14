@@ -74,7 +74,7 @@ public class GamePanel extends JPanel {
 
     ActionListener aboutDialogue =
             e -> JOptionPane.showMessageDialog(
-            about,
+            button5,
             "Made by Ashikur Rahman Shad",
             "About",
             JOptionPane.WARNING_MESSAGE);
